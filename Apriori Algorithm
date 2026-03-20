@@ -1,0 +1,45 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -c -1
+Relation:     student_transactions
+Instances:    5000
+Attributes:   6
+              High_CGPA_Yes
+              High_CGPA_No
+              Good_Attendance_Yes
+              Good_Attendance_No
+              Placed_yes
+              Placed_no
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.5 (2500 instances)
+Minimum metric <confidence>: 0.9
+Number of cycles performed: 10
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 6
+
+Size of set of large itemsets L(2): 7
+
+Size of set of large itemsets L(3): 4
+
+Size of set of large itemsets L(4): 1
+
+Best rules found:
+
+ 1. Good_Attendance_No=0 3454 ==> Good_Attendance_Yes=1 3454    <conf:(1)> lift:(1.45) lev:(0.21) [1067] conv:(1067.98)
+ 2. Good_Attendance_Yes=1 3454 ==> Good_Attendance_No=0 3454    <conf:(1)> lift:(1.45) lev:(0.21) [1067] conv:(1067.98)
+ 3. High_CGPA_No=1 2531 ==> High_CGPA_Yes=0 2531    <conf:(1)> lift:(1.98) lev:(0.25) [1249] conv:(1249.81)
+ 4. High_CGPA_Yes=0 2531 ==> High_CGPA_No=1 2531    <conf:(1)> lift:(1.98) lev:(0.25) [1249] conv:(1249.81)
+ 5. Placed_yes=0 2531 ==> High_CGPA_Yes=0 2531    <conf:(1)> lift:(1.98) lev:(0.25) [1249] conv:(1249.81)
+ 6. High_CGPA_Yes=0 2531 ==> Placed_yes=0 2531    <conf:(1)> lift:(1.98) lev:(0.25) [1249] conv:(1249.81)
+ 7. Placed_no=1 2531 ==> High_CGPA_Yes=0 2531    <conf:(1)> lift:(1.98) lev:(0.25) [1249] conv:(1249.81)
+ 8. High_CGPA_Yes=0 2531 ==> Placed_no=1 2531    <conf:(1)> lift:(1.98) lev:(0.25) [1249] conv:(1249.81)
+ 9. Placed_yes=0 2531 ==> High_CGPA_No=1 2531    <conf:(1)> lift:(1.98) lev:(0.25) [1249] conv:(1249.81)
+10. High_CGPA_No=1 2531 ==> Placed_yes=0 2531    <conf:(1)> lift:(1.98) lev:(0.25) [1249] conv:(1249.81)
+

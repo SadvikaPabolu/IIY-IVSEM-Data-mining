@@ -1,0 +1,27 @@
+=== Run information ===
+
+Scheme:       weka.associations.FPGrowth -P 2 -I -1 -N 10 -T 0 -C 0.9 -D 0.05 -U 1.0 -M 0.1
+Relation:     student_transactions
+Instances:    5000
+Attributes:   6
+              High_CGPA_Yes
+              High_CGPA_No
+              Good_Attendance_Yes
+              Good_Attendance_No
+              Placed_yes
+              Placed_no
+=== Associator model (full training set) ===
+
+FPGrowth found 10 rules (displaying top 10)
+
+ 1. [Placed_no=1]: 2531 ==> [High_CGPA_No=1]: 2531   <conf:(1)> lift:(1.98) lev:(0.25) conv:(1249.81) 
+ 2. [High_CGPA_No=1]: 2531 ==> [Placed_no=1]: 2531   <conf:(1)> lift:(1.98) lev:(0.25) conv:(1249.81) 
+ 3. [Placed_yes=1]: 2469 ==> [High_CGPA_Yes=1]: 2469   <conf:(1)> lift:(2.03) lev:(0.25) conv:(1249.81) 
+ 4. [High_CGPA_Yes=1]: 2469 ==> [Placed_yes=1]: 2469   <conf:(1)> lift:(2.03) lev:(0.25) conv:(1249.81) 
+ 5. [Good_Attendance_Yes=1, Placed_no=1]: 1496 ==> [High_CGPA_No=1]: 1496   <conf:(1)> lift:(1.98) lev:(0.15) conv:(738.72) 
+ 6. [Good_Attendance_Yes=1, High_CGPA_No=1]: 1496 ==> [Placed_no=1]: 1496   <conf:(1)> lift:(1.98) lev:(0.15) conv:(738.72) 
+ 7. [Good_Attendance_Yes=1, Placed_yes=1]: 1958 ==> [High_CGPA_Yes=1]: 1958   <conf:(1)> lift:(2.03) lev:(0.2) conv:(991.14) 
+ 8. [Good_Attendance_Yes=1, High_CGPA_Yes=1]: 1958 ==> [Placed_yes=1]: 1958   <conf:(1)> lift:(2.03) lev:(0.2) conv:(991.14) 
+ 9. [Placed_no=1, Good_Attendance_No=1]: 1035 ==> [High_CGPA_No=1]: 1035   <conf:(1)> lift:(1.98) lev:(0.1) conv:(511.08) 
+10. [High_CGPA_No=1, Good_Attendance_No=1]: 1035 ==> [Placed_no=1]: 1035   <conf:(1)> lift:(1.98) lev:(0.1) conv:(511.08) 
+
